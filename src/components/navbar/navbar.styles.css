@@ -1,0 +1,38 @@
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  font-weight: 100;
+  font-size: 13px;
+}
+.iconContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  gap: 10px;
+}
+.profile {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: red;
+}
+.icon {
+  fill: white;
+  margin: 0 0.5rem;
+  height: 30px;
+  width: 30px;
+  margin-top: 2px;
+  padding: 2px;
+  border-radius: 100%;
+}
+
+.icon:hover {
+  background-color: rgb(82, 82, 82);
+}
