@@ -10,8 +10,8 @@ footer {
   width: 100%;
   font-size: 14px;
   background-color: rgb(23, 23, 23);
-  border-top: 1px solid rgb(113, 113, 113);
-  padding: 0 30px;
+  border-top: 1px solid #313335;
+  padding: 15px 30px;
 }
 
 .footerLinks {

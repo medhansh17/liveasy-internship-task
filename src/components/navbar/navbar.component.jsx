@@ -5,10 +5,10 @@ const Navbar = () => {
     <>
       <nav>
         <div className="iconContainer">
-          <a href="">
+          <a href="https://mail.google.com/">
             <span>Gmail</span>
           </a>
-          <a href="">
+          <a href="https://www.google.com/imghp?hl=en">
             <span>Images</span>
           </a>
           <a href="https://labs.google.com/search?source=hp">
