@@ -1,4 +1,4 @@
-.content-section {
+.contentSection {
   flex-grow: 1;
   display: flex;
   justify-content: center;
@@ -6,7 +6,7 @@
   height: 100vh;
 }
 
-.content-wrapper {
+.contentWrapper {
   position: sticky;
   top: 0px;
   width: 100%;
@@ -17,12 +17,12 @@
   padding-bottom: 150px;
 }
 
-.logo-img {
+.logoImg {
   width: 300px;
   margin-bottom: 20px;
 }
 
-.search-bar {
+.searchBar {
   border: 1px solid #5f6368;
   max-width: 584px;
   width: 100%;
@@ -33,27 +33,27 @@
   padding-left: 15px;
 }
 
-.search-bar:hover {
+.searchBar:hover {
   background-color: #303134;
 }
 
-.search-bar:active {
+.searchBar:active {
   background-color: #303134;
 }
-.search-bar .inputIcon {
+.searchBar .inputIcon {
   height: 24px;
   width: 24px;
   margin-right: 15px;
   fill: #b3b3b3;
 }
-.search-bar i {
+.searchBar i {
   font-size: 18px;
   color: rgb(32, 33, 36);
   margin-right: 15px;
   cursor: pointer;
 }
 
-.search-bar input {
+.searchBar input {
   flex-grow: 1;
   background-color: transparent;
   height: 30px;
@@ -63,15 +63,15 @@
   border: none;
 }
 
-.search-bar input:focus {
+.searchBar input:focus {
   outline: none;
 }
 
-.search-btns {
+.searchBtns {
   margin-top: 20px;
 }
 
-.search-btns button {
+.searchBtns button {
   height: 40px;
   font-size: 14px;
   border: none;
@@ -82,15 +82,15 @@
   cursor: pointer;
 }
 
-.search-btns button:hover {
+.searchBtns button:hover {
   border: 1px solid lightgray;
 }
 
-.google-search-btn {
+.googleSearchBtn {
   width: 120px;
 }
 
-.lucky-search-btn {
+.luckySearchBtn {
   width: 140px;
 }
 

@@ -1,11 +1,31 @@
 import "./hero.styles.css";
+import { useRef } from "react";
 
 const Hero = () => {
+  const inputRef = useRef(null);
+
+  const searchInput = () => {
+    const input = inputRef.current.value;
+    window.location.href =
+      "https://www.google.com/search?q=" +
+      input +
+      "&rlz=1C5CHFA_enNZ948NZ948&oq=" +
+      input +
+      "&aqs=chrome.0.69i59l2j46i175i199i433j46i199i291i433j46j0i433j0j69i60.875j0j9&sourceid=chrome&ie=UTF-8";
+  };
+
+  const handleKeyPress = (event) => {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      searchInput();
+    }
+  };
+
   return (
-    <section className="content-section">
-      <div className="content-wrapper">
-        <img className="logo-img" src="./google.png" alt="google logo" />
-        <div className="search-bar">
+    <section className="contentSection">
+      <div className="contentWrapper">
+        <img className="logoImg" src="./google.png" alt="google logo" />
+        <div className="searchBar">
           <svg
             className="inputIcon"
             focusable="false"
@@ -14,7 +34,13 @@ const Hero = () => {
           >
             <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
           </svg>
-          <input id="search-input" className="search-input" type="text" />
+          <input
+            ref={inputRef}
+            id="search-input"
+            className="searchInput"
+            type="search"
+            onKeyPress={handleKeyPress}
+          />
           <svg
             className="inputIcon"
             focusable="false"
@@ -60,10 +86,19 @@ const Hero = () => {
             </g>
           </svg>
         </div>
-        <div className="search-btns">
-          <button className="google-search-btn">Google Search</button>
-          <a href="https://doodles.google/">
-            <button className="lucky-search-btn">I'm Feeling Lucky</button>
+        <div className="searchBtns">
+          <button
+            className="googleSearchBtn"
+            onClick={(e) => {
+              if (inputRef.current.value !== "") {
+                searchInput();
+              }
+            }}
+          >
+            Google Search
+          </button>
+          <a href="https://doodles.google.com">
+            <button className="luckySearchBtn">I'm Feeling Lucky</button>
           </a>
         </div>
         <div className="language">
@@ -75,9 +110,6 @@ const Hero = () => {
             <a href="#">मराठी</a>
             <a href="#">தமிழ்</a>
             <a href="#">ગુજરાતી</a>
-            <a href="#">ಕನ್ನಡ</a>
-            <a href="#">മലയാളം</a>
-            <a href="#">ਪੰਜਾਬੀ</a>
           </p>
         </div>
       </div>
