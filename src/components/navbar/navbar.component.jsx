@@ -1,16 +1,15 @@
 import "./navbar.styles.css";
-
+import ExternalLink from "../external_link.component";
 const Navbar = () => {
   return (
     <>
       <nav>
         <div className="iconContainer">
-          <a href="https://mail.google.com/">
-            <span>Gmail</span>
-          </a>
-          <a href="https://www.google.com/imghp?hl=en">
-            <span>Images</span>
-          </a>
+          <ExternalLink url="https://mail.google.com/" text="Gmail" />
+          <ExternalLink
+            url="https://www.google.com/imghp?hl=en"
+            text="Images"
+          />
           <a href="https://labs.google.com/search?source=hp">
             <svg
               className="icon"

@@ -4,6 +4,7 @@ import { useRef } from "react";
 const Hero = () => {
   const inputRef = useRef(null);
 
+  // Function to handle search input
   const searchInput = () => {
     const input = inputRef.current.value;
     window.location.href =
@@ -14,10 +15,13 @@ const Hero = () => {
       "&aqs=chrome.0.69i59l2j46i175i199i433j46i199i291i433j46j0i433j0j69i60.875j0j9&sourceid=chrome&ie=UTF-8";
   };
 
+  // Function to handle Enter key press
   const handleKeyPress = (event) => {
     if (event.key === "Enter") {
       event.preventDefault();
-      searchInput();
+      if (inputRef.current.value) {
+        searchInput();
+      }
     }
   };
 
@@ -26,6 +30,7 @@ const Hero = () => {
       <div className="contentWrapper">
         <img className="logoImg" src="./google.png" alt="google logo" />
         <div className="searchBar">
+          {/* Search icon */}
           <svg
             className="inputIcon"
             focusable="false"
@@ -34,6 +39,7 @@ const Hero = () => {
           >
             <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
           </svg>
+          {/* Search input */}
           <input
             ref={inputRef}
             id="search-input"
@@ -41,6 +47,7 @@ const Hero = () => {
             type="search"
             onKeyPress={handleKeyPress}
           />
+          {/* Microphone icon */}
           <svg
             className="inputIcon"
             focusable="false"
@@ -61,35 +68,13 @@ const Hero = () => {
               d="m12 16.93a4.97 5.25 0 0 1 -3.54 -1.55l-1.41 1.49c1.26 1.34 3.02 2.13 4.95 2.13 3.87 0 6.99-2.92 6.99-7h-1.99c0 2.92-2.24 4.93-5 4.93z"
             ></path>
           </svg>
-          <svg
-            className="inputIcon"
-            focusable="false"
-            viewBox="0 0 192 192"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <rect fill="none" height="192" width="192"></rect>
-            <g>
-              <circle fill="#34a853" cx="144.07" cy="144" r="16"></circle>
-              <circle fill="#4285f4" cx="96.07" cy="104" r="24"></circle>
-              <path
-                fill="#ea4335"
-                d="M24,135.2c0,18.11,14.69,32.8,32.8,32.8H96v-16l-40.1-0.1c-8.8,0-15.9-8.19-15.9-17.9v-18H24V135.2z"
-              ></path>
-              <path
-                fill="#fbbc04"
-                d="M168,72.8c0-18.11-14.69-32.8-32.8-32.8H116l20,16c8.8,0,16,8.29,16,18v30h16V72.8z"
-              ></path>
-              <path
-                fill="#4285f4"
-                d="M112,24l-32,0L68,40H56.8C38.69,40,24,54.69,24,72.8V92h16V74c0-9.71,7.2-18,16-18h80L112,24z"
-              ></path>
-            </g>
-          </svg>
+          {/* Google Search and I'm Feeling Lucky buttons */}
         </div>
         <div className="searchBtns">
           <button
             className="googleSearchBtn"
             onClick={(e) => {
+              // Function to handle search button click
               if (inputRef.current.value !== "") {
                 searchInput();
               }
@@ -101,6 +86,7 @@ const Hero = () => {
             <button className="luckySearchBtn">I'm Feeling Lucky</button>
           </a>
         </div>
+        {/* Language selection */}
         <div className="language">
           <p>
             Google Offered in:&nbsp;

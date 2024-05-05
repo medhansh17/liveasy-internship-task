@@ -1,20 +1,30 @@
 import "./footer.styles.css";
+import ExternalLink from "../external_link.component";
 
 const Footer = () => {
   return (
     <footer>
       <div className="footerLinks">
-        <a href="https://about.google/">About</a>
-        <a href="https://ads.google.com/">Advertising</a>
-        <a href="https://www.google.com/intl/en_in/business/">Buisness</a>
-        <a href="https://www.google.com/search/howsearchworks/">
-          How Search Works
-        </a>
+        <ExternalLink url="https://about.google/" text="About" />
+        <ExternalLink url="https://ads.google.com/" text="Advertising" />
+        <ExternalLink
+          url="https://www.google.com/intl/en_in/business/"
+          text="Business"
+        />
+        <ExternalLink
+          url="https://www.google.com/search/howsearchworks/"
+          text="How Search Works"
+        />
       </div>
       <div className="footerLinks">
-        <a href="https://policies.google.com/privacy">Privacy</a>
-        <a href="https://policies.google.com/terms">Terms</a>
-        <a href="">Settings</a>
+        <ExternalLink
+          url="https://policies.google.com/privacy"
+          text="Privacy"
+        />
+        <ExternalLink url="https://policies.google.com/terms" text="Terms" />
+        <a href="" rel="noopener noreferrer" target="_blank">
+          Settings
+        </a>
       </div>
     </footer>
   );
