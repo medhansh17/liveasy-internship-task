@@ -82,7 +82,7 @@ const Hero = () => {
           >
             Google Search
           </button>
-          <a href="https://doodles.google.com">
+          <a href="https://doodles.google/">
             <button className="luckySearchBtn">I'm Feeling Lucky</button>
           </a>
         </div>
