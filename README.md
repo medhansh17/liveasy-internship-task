@@ -23,9 +23,10 @@ To install and run this project locally, follow these steps:
   ```git clone https://github.com/medhansh17/liveasy-internship-task```
 
 2. Install dependencies:
+   
      ```npm install```
 
-3. Start Project:
+4. Start Project:
 
      ```npm run dev```
 
