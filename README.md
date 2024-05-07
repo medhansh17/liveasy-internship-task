@@ -26,6 +26,7 @@ To install and run this project locally, follow these steps:
      ```npm install```
 
 3. Start Project:
+
      ```npm run dev```
 
 ## Usage
