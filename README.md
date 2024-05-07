@@ -34,4 +34,13 @@ To install and run this project locally, follow these steps:
 
 Once the development server runs, you can access the Google homepage clone in your web browser at `http://localhost:3000`.
 
+## Features
+The Google homepage clone includes the following features:
+
+- Google logo
+- Search bar where users can look up queries
+- Google search and "I'm Feeling Lucky" buttons
+- Footer with links to other Google services
+- Responsiveness
+
 This project is licensed under the MIT License.
