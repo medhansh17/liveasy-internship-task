@@ -8,8 +8,7 @@ Welcome to the documentation for the Google homepage clone! This document will g
 2. [Installation](#installation)
 3. [Usage](#usage)
 4. [Features](#features)
-5. [Contributing](#contributing)
-6. [License](#license)
+5. [License](#license)
 
 ## Introduction
 
@@ -21,13 +20,13 @@ To install and run this project locally, follow these steps:
 
 1. Clone the repository:
 
-  git clone https://github.com/medhansh17/liveasy-internship-task
+  ```git clone https://github.com/medhansh17/liveasy-internship-task```
 
 2. Install dependencies:
-     npm install
+     ```npm install```
 
 3. Start Project:
-     npm run dev
+     ```npm run dev```
 
 ## Usage
 
